@@ -749,7 +749,7 @@ export class App extends React.PureComponent<{
 
     return (
       <Layout
-        className={':DocLayout'}
+        className={':DocLayout amis-root-container'}
         theme={theme.value}
         boxed={true}
         offScreen={this.state.offScreen}
