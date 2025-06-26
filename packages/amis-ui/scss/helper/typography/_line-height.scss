@@ -49,7 +49,7 @@ title: Line Height
   }
 }
 
-@include make-line-height();
+@include make-line-height('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-line-height('.' + selector-escape($deivce + ':'));

@@ -34,7 +34,7 @@ title: Visibility
   }
 }
 
-@include make-visibility();
+@include make-visibility('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-visibility('.' + selector-escape($deivce + ':'));

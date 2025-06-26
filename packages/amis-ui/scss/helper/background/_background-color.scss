@@ -179,12 +179,27 @@ title: 背景色
   @include bg-colors-map($colors, '', $prefix, $suffix);
 }
 
-@include bg-colors();
-@include bg-colors('.' + selector-escape('hover:'), ':hover');
-@include bg-colors('.' + selector-escape('active:'), '.is-active');
-@include bg-colors('.' + selector-escape('focus:'), ':focus');
-@include bg-colors('.' + selector-escape('disabled:'), '.is-disabled');
-@include bg-colors('.group:hover .' + selector-escape('group-hover:'));
+@include bg-colors('.amis-root-container .');
+@include bg-colors(
+  '.amis-root-container .' + selector-escape('hover:'),
+  ':hover'
+);
+@include bg-colors(
+  '.amis-root-container .' + selector-escape('active:'),
+  '.is-active'
+);
+@include bg-colors(
+  '.amis-root-container .' + selector-escape('focus:'),
+  ':focus'
+);
+@include bg-colors(
+  '.amis-root-container .' + selector-escape('disabled:'),
+  '.is-disabled'
+);
+@include bg-colors(
+  '.amis-root-container .group:hover .' + selector-escape('group-hover:'),
+  ':hover'
+);
 
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {

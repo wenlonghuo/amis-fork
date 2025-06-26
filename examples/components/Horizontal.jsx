@@ -111,7 +111,7 @@ export default {
       type: 'plain',
       tpl: '示例',
       inline: false,
-      className: 'h3 m-t m-b-xs'
+      className: 'h3 m-t m-b-xs mt-44 h-20 text-lg'
     },
     {
       type: 'grid',

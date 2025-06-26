@@ -381,7 +381,7 @@ title: Padding
   @include padding-left-spacing($spacing, $prefix, $suffix);
 }
 
-@include make-padding();
+@include make-padding('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-padding('.' + selector-escape($deivce + ':'));

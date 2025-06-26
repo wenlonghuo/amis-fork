@@ -216,7 +216,7 @@ title: Space Between
   @include space-y-spacing($spacing, $prefix, $suffix);
 }
 
-@include make-spaces();
+@include make-spaces('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-spaces('.' + selector-escape($deivce + ':'));

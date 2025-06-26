@@ -166,7 +166,7 @@ title: Width
   @include min-width-sizing($minWidths, $prefix);
 }
 
-@include make-widths();
+@include make-widths('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-widths('.' + selector-escape($deivce + ':'));

@@ -20,7 +20,7 @@ title: Flex Grow
   }
 }
 
-@include make-flex-grow();
+@include make-flex-grow('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex-grow('.' + selector-escape($deivce + ':'));

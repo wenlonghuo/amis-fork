@@ -39,7 +39,7 @@ title: Font Weight
   }
 }
 
-@include make-font-weight();
+@include make-font-weight('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-font-weight('.' + selector-escape($deivce + ':'));

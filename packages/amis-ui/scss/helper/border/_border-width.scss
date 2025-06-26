@@ -58,7 +58,7 @@ title: 边框宽度
   }
 }
 
-@include border-widths();
+@include border-widths('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include border-widths('.' + selector-escape($deivce + ':'));

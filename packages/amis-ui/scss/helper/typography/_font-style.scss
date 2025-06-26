@@ -21,7 +21,7 @@ title: Font Style
   }
 }
 
-@include make-font-style();
+@include make-font-style('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-font-style('.' + selector-escape($deivce + ':'));

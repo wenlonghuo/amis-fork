@@ -74,7 +74,7 @@ https://tailwindcss.com/docs/display
   }
 }
 
-@include make-display();
+@include make-display('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-display('.' + selector-escape($deivce + ':'));

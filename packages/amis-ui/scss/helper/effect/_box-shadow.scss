@@ -39,12 +39,26 @@ title: Box Shadow
   }
 }
 
-@include make-box-shadow();
-@include make-box-shadow('.' + selector-escape('hover:'), ':hover');
-@include make-box-shadow('.' + selector-escape('active:'), '.is-active');
-@include make-box-shadow('.' + selector-escape('focus:'), ':focus');
-@include make-box-shadow('.' + selector-escape('disabled:'), '.is-disabled');
-@include make-box-shadow('.group:hover .' + selector-escape('group-hover:'));
+@include make-box-shadow('.amis-root-container .');
+@include make-box-shadow(
+  '.amis-root-container .' + selector-escape('hover:'),
+  ':hover'
+);
+@include make-box-shadow(
+  '.amis-root-container .' + selector-escape('active:'),
+  '.is-active'
+);
+@include make-box-shadow(
+  '.amis-root-container .' + selector-escape('focus:'),
+  ':focus'
+);
+@include make-box-shadow(
+  '.amis-root-container .' + selector-escape('disabled:'),
+  '.is-disabled'
+);
+@include make-box-shadow(
+  '.amis-root-container .group:hover .' + selector-escape('group-hover:')
+);
 
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {

@@ -30,7 +30,7 @@ title: Grid Auto Flow
   }
 }
 
-@include make-grid-auto-flow();
+@include make-grid-auto-flow('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-grid-auto-flow('.' + selector-escape($deivce + ':'));

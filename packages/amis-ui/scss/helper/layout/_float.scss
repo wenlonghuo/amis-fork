@@ -63,7 +63,7 @@ title: Floats
   }
 }
 
-@include make-float();
+@include make-float('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-float('.' + selector-escape($deivce + ':'));

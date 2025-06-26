@@ -281,7 +281,7 @@ export function embed(
     };
 
     return (
-      <div className="amis-routes-wrapper">
+      <div className="amis-routes-wrapper amis-root-container">
         <ToastComponent
           position={(env && env.toastPosition) || 'top-center'}
           closeButton={false}

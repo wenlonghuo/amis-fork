@@ -19,7 +19,7 @@ title: Flex Shrink
   }
 }
 
-@include make-flex-shrink();
+@include make-flex-shrink('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex-shrink('.' + selector-escape($deivce + ':'));

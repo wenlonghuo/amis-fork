@@ -47,7 +47,7 @@ https://www.w3school.com.cn/cssref/pr_class_position.asp
   }
 }
 
-@include make-position();
+@include make-position('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-position('.' + selector-escape($deivce + ':'));

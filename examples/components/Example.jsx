@@ -32,7 +32,7 @@ import FormLayoutTestSchema from './Form/layoutTest';
 import Definitions from './Form/Definitions';
 import AnchorNav from './Form/AnchorNav';
 import InputKVSSchema from './Form/InputKVS';
-import TimelineSchema from "./Timeline";
+import TimelineSchema from './Timeline';
 import Tree from './Form/Tree';
 
 import TableCrudSchema from './CRUD/Table';
@@ -973,8 +973,9 @@ export default class Example extends React.PureComponent {
 
   render() {
     return (
-      <Switch>
-        {/* {React.cloneElement(this.props.children, {
+      <div className="amis-root-container">
+        <Switch>
+          {/* {React.cloneElement(this.props.children, {
           ...this.props.children.props,
           theme: this.props.theme,
           classPrefix: this.props.classPrefix,
@@ -982,14 +983,15 @@ export default class Example extends React.PureComponent {
           viewMode: this.props.viewMode,
           offScreen: this.props.offScreen
         })} */}
-        {navigations2route(examples, {
-          theme: this.props.theme,
-          classPrefix: this.props.classPrefix,
-          locale: this.props.locale,
-          viewMode: this.props.viewMode,
-          offScreen: this.props.offScreen
-        })}
-      </Switch>
+          {navigations2route(examples, {
+            theme: this.props.theme,
+            classPrefix: this.props.classPrefix,
+            locale: this.props.locale,
+            viewMode: this.props.viewMode,
+            offScreen: this.props.offScreen
+          })}
+        </Switch>
+      </div>
     );
   }
 }

@@ -32,7 +32,7 @@ title: Font Size
   }
 }
 
-@include make-font-size();
+@include make-font-size('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-font-size('.' + selector-escape($deivce + ':'));

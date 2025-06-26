@@ -32,7 +32,7 @@ title: Whitespace
   }
 }
 
-@include make-whitespace();
+@include make-whitespace('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-whitespace('.' + selector-escape($deivce + ':'));

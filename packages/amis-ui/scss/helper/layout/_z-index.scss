@@ -59,7 +59,7 @@ Utilities for controlling the stack order of an element.
   }
 }
 
-@include make-z-index();
+@include make-z-index('.amis-root-container .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-z-index('.' + selector-escape($deivce + ':'));
