@@ -807,7 +807,7 @@ title: Margin
   @include margin-negative-left-spacing($margins, $prefix, $suffix);
 }
 
-@include make-margins('.amis-root-container .');
+@include make-margins('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-margins('.' + selector-escape($deivce + ':'));

@@ -26,7 +26,7 @@ title: Flex Wrap
   }
 }
 
-@include make-flex-wrap('.amis-root-container .');
+@include make-flex-wrap('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex-wrap('.' + selector-escape($deivce + ':'));

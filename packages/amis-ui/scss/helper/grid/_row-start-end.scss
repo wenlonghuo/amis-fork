@@ -189,9 +189,9 @@ title: Grid Row Start / End
   }
 }
 
-@include make-grid-row-span('.amis-root-container .');
-@include make-grid-row-start('.amis-root-container .');
-@include make-grid-row-end('.amis-root-container .');
+@include make-grid-row-span('[class^="cxd-"] .');
+@include make-grid-row-start('[class^="cxd-"] .');
+@include make-grid-row-end('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-grid-row-span('.' + selector-escape($deivce + ':'));

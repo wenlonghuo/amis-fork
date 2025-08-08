@@ -32,7 +32,7 @@ title: 边框样式
   }
 }
 
-@include make-border-style('.amis-root-container .');
+@include make-border-style('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-border-style('.' + selector-escape($deivce + ':'));

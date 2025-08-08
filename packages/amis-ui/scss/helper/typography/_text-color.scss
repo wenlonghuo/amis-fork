@@ -149,25 +149,19 @@ title: Text Color
   @include text-colors-map($colors, '', $prefix, $suffix);
 }
 
-@include text-colors('.amis-root-container .');
+@include text-colors('[class^="cxd-"] .');
+@include text-colors('[class^="cxd-"] .' + selector-escape('hover:'), ':hover');
 @include text-colors(
-  '.amis-root-container .' + selector-escape('hover:'),
-  ':hover'
-);
-@include text-colors(
-  '.amis-root-container .' + selector-escape('active:'),
+  '[class^="cxd-"] .' + selector-escape('active:'),
   '.is-active'
 );
+@include text-colors('[class^="cxd-"] .' + selector-escape('focus:'), ':focus');
 @include text-colors(
-  '.amis-root-container .' + selector-escape('focus:'),
-  ':focus'
-);
-@include text-colors(
-  '.amis-root-container .' + selector-escape('disabled:'),
+  '[class^="cxd-"] .' + selector-escape('disabled:'),
   '.is-disabled'
 );
 @include text-colors(
-  '.amis-root-container .group:hover .' + selector-escape('group-hover:')
+  '[class^="cxd-"] .group:hover .' + selector-escape('group-hover:')
 );
 
 @each $deivce in map-keys($devices) {

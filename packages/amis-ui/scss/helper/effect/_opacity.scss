@@ -52,7 +52,7 @@ title: Opacity
   }
 }
 
-@include make-opacity('.amis-root-container .');
+@include make-opacity('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-opacity('.' + selector-escape($deivce + ':'));

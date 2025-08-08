@@ -24,7 +24,7 @@ title: Text Decoration
   }
 }
 
-@include make-text-decoration('.amis-root-container .');
+@include make-text-decoration('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-text-decoration('.' + selector-escape($deivce + ':'));

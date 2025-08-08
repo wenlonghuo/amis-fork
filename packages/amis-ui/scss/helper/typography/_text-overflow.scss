@@ -30,7 +30,7 @@ title: Text OverFlow
   }
 }
 
-@include make-text-overflow('.amis-root-container .');
+@include make-text-overflow('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-text-overflow('.' + selector-escape($deivce + ':'));

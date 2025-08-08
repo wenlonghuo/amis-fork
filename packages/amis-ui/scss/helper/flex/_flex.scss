@@ -30,7 +30,7 @@ title: Flex
   }
 }
 
-@include make-flex('.amis-root-container .');
+@include make-flex('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex('.' + selector-escape($deivce + ':'));

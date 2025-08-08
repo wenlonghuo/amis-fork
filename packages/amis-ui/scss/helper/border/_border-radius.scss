@@ -138,7 +138,7 @@ title: 边框圆角
   }
 }
 
-@include border-radius('.amis-root-container .');
+@include border-radius('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include border-radius('.' + selector-escape($deivce + ':'));

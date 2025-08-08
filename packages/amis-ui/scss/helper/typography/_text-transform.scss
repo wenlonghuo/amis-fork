@@ -30,7 +30,7 @@ title: Text Transform
   }
 }
 
-@include make-text-transform('.amis-root-container .');
+@include make-text-transform('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-text-transform('.' + selector-escape($deivce + ':'));

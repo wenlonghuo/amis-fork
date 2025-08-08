@@ -24,7 +24,7 @@ title: Text Align
   }
 }
 
-@include make-text-align('.amis-root-container .');
+@include make-text-align('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-text-align('.' + selector-escape($deivce + ':'));

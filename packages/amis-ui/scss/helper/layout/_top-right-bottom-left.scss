@@ -252,9 +252,9 @@ title: Top / Right / Bottom / Left
 @include make-single-positions('bottom');
 @include make-single-positions('left');
 
-@include make-inset-positions('.amis-root-container .');
-@include make-inset-x-positions('.amis-root-container .');
-@include make-inset-y-positions('.amis-root-container .');
+@include make-inset-positions('[class^="cxd-"] .');
+@include make-inset-x-positions('[class^="cxd-"] .');
+@include make-inset-y-positions('[class^="cxd-"] .');
 
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {

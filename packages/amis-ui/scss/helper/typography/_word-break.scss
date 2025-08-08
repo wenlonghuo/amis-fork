@@ -26,7 +26,7 @@ title: Word Break
   }
 }
 
-@include make-word-break('.amis-root-container .');
+@include make-word-break('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-word-break('.' + selector-escape($deivce + ':'));

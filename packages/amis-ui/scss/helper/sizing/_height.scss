@@ -153,7 +153,7 @@ title: Height
   @include max-height-sizing($maxHeights, $prefix);
 }
 
-@include make-heights('.amis-root-container .');
+@include make-heights('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-heights('.' + selector-escape($deivce + ':'));

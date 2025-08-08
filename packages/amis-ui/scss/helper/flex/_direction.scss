@@ -31,7 +31,7 @@ title: Flex Direction
   }
 }
 
-@include make-flex-direction('.amis-root-container .');
+@include make-flex-direction('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex-direction('.' + selector-escape($deivce + ':'));

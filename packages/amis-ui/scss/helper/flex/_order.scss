@@ -48,7 +48,7 @@ title: Flex Order
   }
 }
 
-@include make-flex-order('.amis-root-container .');
+@include make-flex-order('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-flex-order('.' + selector-escape($deivce + ':'));

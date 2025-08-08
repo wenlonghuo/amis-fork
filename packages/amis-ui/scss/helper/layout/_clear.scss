@@ -48,7 +48,7 @@ https://www.w3school.com.cn/cssref/pr_class_clear.asp
   }
 }
 
-@include make-clear('.amis-root-container .');
+@include make-clear('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-clear('.' + selector-escape($deivce + ':'));

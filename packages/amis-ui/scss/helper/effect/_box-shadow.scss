@@ -39,25 +39,25 @@ title: Box Shadow
   }
 }
 
-@include make-box-shadow('.amis-root-container .');
+@include make-box-shadow('[class^="cxd-"] .');
 @include make-box-shadow(
-  '.amis-root-container .' + selector-escape('hover:'),
+  '[class^="cxd-"] .' + selector-escape('hover:'),
   ':hover'
 );
 @include make-box-shadow(
-  '.amis-root-container .' + selector-escape('active:'),
+  '[class^="cxd-"] .' + selector-escape('active:'),
   '.is-active'
 );
 @include make-box-shadow(
-  '.amis-root-container .' + selector-escape('focus:'),
+  '[class^="cxd-"] .' + selector-escape('focus:'),
   ':focus'
 );
 @include make-box-shadow(
-  '.amis-root-container .' + selector-escape('disabled:'),
+  '[class^="cxd-"] .' + selector-escape('disabled:'),
   '.is-disabled'
 );
 @include make-box-shadow(
-  '.amis-root-container .group:hover .' + selector-escape('group-hover:')
+  '[class^="cxd-"] .group:hover .' + selector-escape('group-hover:')
 );
 
 @each $deivce in map-keys($devices) {

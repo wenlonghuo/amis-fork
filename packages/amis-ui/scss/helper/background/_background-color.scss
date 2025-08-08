@@ -179,25 +179,19 @@ title: 背景色
   @include bg-colors-map($colors, '', $prefix, $suffix);
 }
 
-@include bg-colors('.amis-root-container .');
+@include bg-colors('[class^="cxd-"] .');
+@include bg-colors('[class^="cxd-"] .' + selector-escape('hover:'), ':hover');
 @include bg-colors(
-  '.amis-root-container .' + selector-escape('hover:'),
-  ':hover'
-);
-@include bg-colors(
-  '.amis-root-container .' + selector-escape('active:'),
+  '[class^="cxd-"] .' + selector-escape('active:'),
   '.is-active'
 );
+@include bg-colors('[class^="cxd-"] .' + selector-escape('focus:'), ':focus');
 @include bg-colors(
-  '.amis-root-container .' + selector-escape('focus:'),
-  ':focus'
-);
-@include bg-colors(
-  '.amis-root-container .' + selector-escape('disabled:'),
+  '[class^="cxd-"] .' + selector-escape('disabled:'),
   '.is-disabled'
 );
 @include bg-colors(
-  '.amis-root-container .group:hover .' + selector-escape('group-hover:'),
+  '[class^="cxd-"] .group:hover .' + selector-escape('group-hover:'),
   ':hover'
 );
 

@@ -146,7 +146,7 @@ title: Gap
   }
 }
 
-@include make-gaps('.amis-root-container .');
+@include make-gaps('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-gaps('.' + selector-escape($deivce + ':'));

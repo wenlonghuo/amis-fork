@@ -143,25 +143,25 @@ title: 边框颜色
   @include border-colors-map($colors, '', $prefix, $suffix);
 }
 
-@include border-colors('.amis-root-container .');
+@include border-colors('[class^="cxd-"] .');
 @include border-colors(
-  '.amis-root-container .' + selector-escape('hover:'),
+  '[class^="cxd-"] .' + selector-escape('hover:'),
   ':hover'
 );
 @include border-colors(
-  '.amis-root-container .' + selector-escape('active:'),
+  '[class^="cxd-"] .' + selector-escape('active:'),
   '.is-active'
 );
 @include border-colors(
-  '.amis-root-container .' + selector-escape('focus:'),
+  '[class^="cxd-"] .' + selector-escape('focus:'),
   ':focus'
 );
 @include border-colors(
-  '.amis-root-container .' + selector-escape('disabled:'),
+  '[class^="cxd-"] .' + selector-escape('disabled:'),
   '.is-disabled'
 );
 @include border-colors(
-  '.amis-root-container .group:hover .' + selector-escape('group-hover:')
+  '[class^="cxd-"] .group:hover .' + selector-escape('group-hover:')
 );
 
 @each $deivce in map-keys($devices) {

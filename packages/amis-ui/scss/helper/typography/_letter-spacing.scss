@@ -33,7 +33,7 @@ title: Letter Spacing
   }
 }
 
-@include make-letter-spacing('.amis-root-container .');
+@include make-letter-spacing('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-letter-spacing('.' + selector-escape($deivce + ':'));

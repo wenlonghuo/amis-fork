@@ -30,7 +30,7 @@ title: Grid Auto Flow
   }
 }
 
-@include make-grid-auto-rows('.amis-root-container .');
+@include make-grid-auto-rows('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-grid-auto-rows('.' + selector-escape($deivce + ':'));

@@ -42,7 +42,7 @@ title: Grid Template Rows
   }
 }
 
-@include make-grid-rows('.amis-root-container .');
+@include make-grid-rows('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-grid-rows('.' + selector-escape($deivce + ':'));

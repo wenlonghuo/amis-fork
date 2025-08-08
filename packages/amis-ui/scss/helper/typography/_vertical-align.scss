@@ -34,7 +34,7 @@ title: Vertial Align
   }
 }
 
-@include make-vertical-align('.amis-root-container .');
+@include make-vertical-align('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-vertical-align('.' + selector-escape($deivce + ':'));

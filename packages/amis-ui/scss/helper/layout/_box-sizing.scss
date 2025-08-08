@@ -48,4 +48,4 @@ Box Sizing 相关样式，主要区别在于设置宽高的时候，是否包含
   }
 }
 
-@include make-box-sizing('.amis-root-container .');
+@include make-box-sizing('[class^="cxd-"] .');

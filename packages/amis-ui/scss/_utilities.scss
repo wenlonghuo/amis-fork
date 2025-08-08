@@ -3,7 +3,7 @@
  */
 
 // background
-.amis-root-container {
+[class^='cxd-'] {
   .bg-light {
     @include color-variant($light, 2%, 3%, 3%, 5%);
     color: $text-color;

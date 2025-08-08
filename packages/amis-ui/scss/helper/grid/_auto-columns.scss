@@ -30,7 +30,7 @@ title: Grid Auto Columns
   }
 }
 
-@include make-grid-auto-columns('.amis-root-container .');
+@include make-grid-auto-columns('[class^="cxd-"] .');
 @each $deivce in map-keys($devices) {
   @include media-device($deivce) {
     @include make-grid-auto-columns('.' + selector-escape($deivce + ':'));

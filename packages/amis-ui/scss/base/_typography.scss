@@ -15,7 +15,7 @@
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 // }
-.amis-root-container {
+[class^='cxd-'] {
   a {
     color: var(--link-color);
     font-size: var(--link-fontSize);
